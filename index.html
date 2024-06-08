@@ -65,7 +65,7 @@
         <h1>Sri Damodara Jyotishalaya</h1>
         <nav>
             <ul>
-                <li><a href="#janma_kundali">ଜନ୍ମ କୁଣ୍ଡଳୀ</a></li>
+                <li><a href="#janma_kundali" onclick="openPopup()">ଜନ୍ମ କୁଣ୍ଡଳୀ / Generate Birth Chart</a></li>
                 <li><a href="#prajapati_melaka">ପ୍ରଜାପତି ମେଳକ</a></li>
                 <li><a href="#jyotishanka_saha_sambada">ଜ୍ୟୋତିଷଙ୍କ ସହ ସମ୍ବାଦ</a></li>
                 <li><a href="#quote">Quote of the Day</a></li>
@@ -96,6 +96,11 @@
     </main>
     <footer>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        function openPopup() {
+            // Open popup window
+            var popup = window.open("popup.html", "Popup", "width=400,height=300");
+        }
+    </script>
 </body>
 </html>
