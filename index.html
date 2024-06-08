@@ -29,6 +29,7 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            position: relative;
         }
         header h1, header h2 {
             margin: 0;
@@ -64,6 +65,19 @@
         }
         nav ul li a:hover {
             color: #ffcc00;
+        }
+        .language-dropdown {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        .language-dropdown select {
+            padding: 5px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
         }
         .expandable-section {
             background-color: #fff;
@@ -113,6 +127,16 @@
                 <li><a href="#muhurtha">ମୁହୁର୍ତ</a></li>
             </ul>
         </nav>
+        <div class="language-dropdown">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="or">Odia</option>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="bn">Bengali</option>
+                <option value="te">Telugu</option>
+                <option value="kn">Kannada</option>
+            </select>
+        </div>
     </header>
     <img src="jagannath_image.jpg" alt="Lord Jagannath" class="jagannath-image">
     <main>
@@ -191,9 +215,19 @@
                 var content = section.querySelector('.expandable-content');
                 heading.addEventListener('click', function() {
                     content.classList.toggle('expanded');
+                    content.style.display = content.style.display === "block" ? "none" : "block";
                 });
             });
         });
+
+        // Function to change language
+        function changeLanguage() {
+            var languageSelect = document.getElementById('language-select');
+            var selectedLanguage = languageSelect.value;
+            // Logic to change language content goes here
+            // This could involve fetching translations and updating the content
+            alert("Language changed to: " + selectedLanguage);
+        }
     </script>
 </body>
 </html>
