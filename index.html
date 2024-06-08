@@ -22,6 +22,12 @@
             margin: 0;
             font-size: 36px;
         }
+        .english-letter {
+            color: yellow;
+        }
+        .odia-letter {
+            color: red;
+        }
         nav ul {
             margin: 0;
             padding: 0;
@@ -40,79 +46,88 @@
         nav ul li a:hover {
             color: #ffcc00;
         }
-        main {
-            padding: 20px;
-        }
-        section {
+        .expandable-section {
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
         }
-        section h2 {
-            margin-top: 0;
-            font-size: 24px;
-            color: #333;
+        .expandable-section h2 {
+            cursor: pointer;
         }
-        section p {
-            font-size: 18px;
-            color: #666;
+        .expandable-content {
+            display: none;
         }
-        .quote {
-            font-style: italic;
-            font-size: 20px;
-            margin-bottom: 10px;
+        .yellow-red-line {
+            text-align: center;
+            color: yellow;
+            background-color: red;
+            padding: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Sri Damodara Jyotishalaya</h1>
+        <h1><span class="english-letter">S</span><span class="odia-letter">ଶ୍ରୀ</span> <span class="english-letter">D</span><span class="odia-letter">ଦା</span><span class="english-letter">m</span><span class="odia-letter">ମୋ</span><span class="english-letter">d</span><span class="odia-letter">ଦର</span><span class="english-letter">a</span><span class="odia-letter"> ଜ୍ୟୋତିଷାଳୟ</span></h1>
         <nav>
             <ul>
                 <li><a href="#janma_kundali">ଜନ୍ମ କୁଣ୍ଡଳୀ</a></li>
                 <li><a href="#prajapati_melaka">ପ୍ରଜାପତି ମେଳକ</a></li>
-                <li><a href="#jyotishanka_saha_sambada">ଜ୍ୟୋତିଷଙ୍କ ସହ ସମ୍ବାଦ</a></li>
+                <li><a href="https://yourlivewebsite.com" target="_blank">ଜ୍ୟୋତିଷଙ୍କ ସହ ସମ୍ବାଦ</a></li>
+                <li><a href="#maa_tara_tarini_panjika">ମା ତାରା ତାରିଣୀ ପଞ୍ଜିକା</a></li>
+                <li><a href="#muhurtha">ମୁହୁର୍ତ</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
             <h2>Motto of Sri Damodara Jyotishalaya</h2>
-            <p class="quote">"यो जा्तकं न जानाति ग्रहाणां च विलक्षणम्। श्रीफलानि न विन्देत कालविद्याफलं फलम्॥"</p>
+            <p>Om namo Damodaraya</p>
+        </section>
+        <section class="expandable-section" id="janma_kundali">
+            <h2>ଜନ୍ମ କୁଣ୍ଡଳୀ / Generate Birth Chart</h2>
+            <div class="expandable-content">
+                <!-- Input fields for birth chart generation -->
+                <!-- Example: -->
+                <!-- <input type="text" placeholder="Enter Birth Details"> -->
+            </div>
+        </section>
+        <section class="expandable-section" id="prajapati_melaka">
+            <h2>ପ୍ରଜାପତି ମେଳକ</h2>
+            <div class="expandable-content">
+                <!-- Input fields for groom and bride details -->
+                <!-- Example: -->
+                <!-- <input type="text" placeholder="Groom's Details"> -->
+                <!-- <input type="text" placeholder="Bride's Details"> -->
+            </div>
         </section>
         <section>
-            <h2>Shloka of the Day</h2>
-            <p>स्वातन्त्र्येण जनो यस्य विचारो न समाधि न जातु सो योगी।<br>
-            अहमेव स्वातन्त्र्यभाजनं न पर्यायं न च मेषम्॥</p>
+            <h2>Maa Tara Tarini Panjika (Vaidik Calender)</h2>
+            <!-- Content for Maa Tara Tarini Panjika -->
         </section>
-        <section id="janma_kundali">
-            <h2>ଜନ୍ମ କୁଣ୍ଡଳୀ / Generate Birth Chart</h2>
+        <section>
+            <h2>Muhurtha</h2>
+            <!-- Content for Muhurtha -->
         </section>
-        <section id="prajapati_melaka">
-            <h2>ପ୍ରଜାପତି ମେଳକ</h2>
-        </section>
-        <section id="jyotishanka_saha_sambada">
-            <h2>ଜ୍ୟୋତିଷଙ୍କ ସହ ସମ୍ବାଦ</h2>
-        </section>
-        <div style="text-align:center;">
-            <a href="janma_kundali.html"><button>Generate Birth Chart</button></a>
-            <a href="prajapati_melaka.html"><button>Prajapati Melaka</button></a>
-            <a href="jyotishanka_saha_sambada.html"><button>Jyotishanka Saha Sambada</button></a>
+        <div class="yellow-red-line">
+            ଜ୍ୟୋତିଷ ଶ୍ରୀ ଦାମୋଦର ଦାଶ ଶର୍ମା ଙ୍କ ଆଶୀର୍ବାଦ
         </div>
     </main>
     <footer>
     </footer>
     <script>
-        function toggleLanguage() {
-            var language = document.documentElement.lang;
-            if (language === "or") {
-                document.documentElement.lang = "en";
-            } else {
-                document.documentElement.lang = "or";
-            }
-            window.location.reload(); // Refresh page to apply language change
-        }
+        // JavaScript to toggle expandable sections
+        document.addEventListener("DOMContentLoaded", function() {
+            var expandableSections = document.querySelectorAll('.expandable-section');
+            expandableSections.forEach(function(section) {
+                var heading = section.querySelector('h2');
+                var content = section.querySelector('.expandable-content');
+                heading.addEventListener('click', function() {
+                    content.classList.toggle('expanded');
+                });
+            });
+        });
     </script>
 </body>
 </html>
