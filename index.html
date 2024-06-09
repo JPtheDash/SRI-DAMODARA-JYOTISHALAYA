@@ -127,16 +127,6 @@
                 <li><a href="#muhurtha">ମୁହୁର୍ତ</a></li>
             </ul>
         </nav>
-        <div class="language-dropdown">
-            <select id="language-select" onchange="changeLanguage()">
-                <option value="or">Odia</option>
-                <option value="en">English</option>
-                <option value="hi">Hindi</option>
-                <option value="bn">Bengali</option>
-                <option value="te">Telugu</option>
-                <option value="kn">Kannada</option>
-            </select>
-        </div>
     </header>
     <img src="babb0a4032d39649a6dec6ff7a753c0f.jpg" alt="Lord Jagannath" class="jagannath-image">
     <main>
@@ -219,15 +209,6 @@
                 });
             });
         });
-
-        // Function to change language
-        function changeLanguage() {
-            var languageSelect = document.getElementById('language-select');
-            var selectedLanguage = languageSelect.value;
-            // Logic to change language content goes here
-            // This could involve fetching translations and updating the content
-            alert("Language changed to: " + selectedLanguage);
-        }
     </script>
 </body>
 </html>
