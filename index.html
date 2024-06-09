@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Damodara Jyotishalaya</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css"> 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
+
         .sub-heading {
             text-align: center;
             color: goldenrod;
@@ -24,61 +25,58 @@
             top: 0;
             z-index: 1000;
         }
+
         header {
             background-color: #333;
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            position: relative;
         }
+
         header h1, header h2 {
             margin: 0;
         }
+
         header h1 {
             font-size: 36px;
         }
+
         header h2 {
             font-size: 18px;
         }
+
         .english-letter {
             color: yellow;
             font-size: 18px;
             display: block;
         }
+
         .odia-letter {
             color: red;
         }
+
         nav ul {
             margin: 0;
             padding: 0;
             list-style-type: none;
             text-align: center;
         }
+
         nav ul li {
             display: inline;
             margin-right: 20px;
         }
+
         nav ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 18px;
         }
+
         nav ul li a:hover {
             color: #ffcc00;
         }
-        .language-dropdown {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-        }
-        .language-dropdown select {
-            padding: 5px;
-            font-size: 16px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-        }
+
         .expandable-section {
             background-color: #fff;
             padding: 20px;
@@ -87,6 +85,7 @@
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             border: 1px solid #ccc;
         }
+
         .expandable-section h2 {
             cursor: pointer;
             background-color: #ffcc00;
@@ -94,10 +93,12 @@
             border-radius: 5px;
             text-align: center;
         }
+
         .expandable-content {
             display: none;
             margin-top: 10px;
         }
+
         .yellow-red-line {
             text-align: center;
             color: yellow;
@@ -106,10 +107,43 @@
             border-radius: 5px;
             margin-top: 20px;
         }
+
         .jagannath-image {
             display: block;
             margin: 20px auto;
             width: 200px;
+        }
+
+        /* Style for Panjika */
+        #maa_tara_tarini_panjika .expandable-content {
+            display: inline-block; /* Single line display */
+            margin-top: 0;
+        }
+
+        /* Additional styling for a professional look (adjust to your liking) */
+        .expandable-section h2 {
+            font-weight: bold;
+        }
+        .expandable-section form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .expandable-section label {
+            margin-bottom: 5px;
+        }
+        .expandable-section input {
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .expandable-section input[type="submit"] {
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -161,7 +195,7 @@
                     <input type="time" id="groom_time" name="groom_time"><br><br>
                     <label for="groom_place">Place of Birth:</label>
                     <input type="text" id="groom_place" name="groom_place"><br><br>
-                    
+
                     <h3>Bride's Details</h3>
                     <label for="bride_name">Name:</label>
                     <input type="text" id="bride_name" name="bride_name"><br><br>
@@ -171,7 +205,7 @@
                     <input type="time" id="bride_time" name="bride_time"><br><br>
                     <label for="bride_place">Place of Birth:</label>
                     <input type="text" id="bride_place" name="bride_place"><br><br>
-                    
+
                     <input type="submit" value="Match">
                 </form>
             </div>
@@ -179,7 +213,6 @@
         <section class="expandable-section" id="maa_tara_tarini_panjika">
             <h2>ମା ତାରା ତାରିଣୀ ପଞ୍ଜିକା</h2>
             <div class="expandable-content">
-                <!-- Content for Maa Tara Tarini Panjika -->
                 <p>Content for Maa Tara Tarini Panjika will go here.</p>
             </div>
         </section>
